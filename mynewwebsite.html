@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body{
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box" id="1">
+    </div>
+
+</body>
+</html>
+
+<script>
+    let x = document.getElementById("1");
+    console.log(x);
+    let n = 1000;
+
+    function fx(i) {
+        if (i % 3 == 0) {
+            document.body.style.backgroundColor = "red";
+        } else if (i % 3 == 1) {
+            document.body.style.backgroundColor = "lime";
+        } else {
+            document.body.style.backgroundColor = "blue";
+        }
+    }
+
+    for (let i = 0; i <= n; i++) {
+        setTimeout(() => {
+            fx(i);
+        }, i * 500);
+    }
+</script>
